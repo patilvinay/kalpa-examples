@@ -1,0 +1,26 @@
+kalpa:
+  vars:
+    dir: "{{env.PWD}}/test"
+    cwd: "{{env.PWD}}"
+  play:
+    - name: create dir {{< item >}}
+      kalpa-file:
+        action: mkdir
+        dir: "{{< item >}}"
+      loop:
+        - "{{ vars.dir }}"
+        - "{{ vars.dir }}/lib"
+      debug:
+        - "--->This is debug string<---"
+        - " create dir {{< item >}}"
+        - "--->End of debug message<---"
+    - name: copy file/dir {{< item >}}
+      kalpa-file:
+        action: copy
+        src: "{{ vars.cwd }}/{{< item >}}"
+        dest: "{{ vars.dir }}/{{< item >}}"
+      loop:
+        - "main.yml"
+      debug:
+        - "{{ vars.cwd }}/{{< item >}}"
+        - "{{ vars.dir }}/{{< item >}}"
