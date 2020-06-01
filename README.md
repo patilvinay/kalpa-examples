@@ -1,9 +1,8 @@
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![License][apache-image]][apache-url] [![semantic-release][semantic-release-image]][semantic-release-url]
 
-
 # kalpa-examples
 
-kalpa module
+kalpa examples
 
 ## Getting started
 
